@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GroceriesApplication {
 
 	public static void main(String[] args) {
-//		System.setProperty("server.servlet.context-path", "/groceries");
+//		System.setProperty("server.servlet.context-path", GroceriesConstants.Config.CONTEXT_PATH); //Here we set the context with the Java System property. 
 		SpringApplication.run(GroceriesApplication.class, args);
 	}
 
