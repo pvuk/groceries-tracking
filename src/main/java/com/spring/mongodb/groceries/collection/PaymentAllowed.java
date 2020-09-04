@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 			"BHIM_UPI": "Yes",
 			"SWIPING_MACHINE_AVAILABLE": "Yes",
 			"CASH": "Yes",
+			"QR_CODE_SCANAND_PAY": "Yes",
 			"Comment": ""
 		}
  * @author P.V. UdayKiran
@@ -31,6 +32,15 @@ public class PaymentAllowed {
 	
 	@Field(value = "CASH")
 	private Boolean cash;
+	
+	@Field(value = "QR_CODE_SCANAND_PAY")
+	private Boolean qrCodeScanAndPay;
+	
+	@Field(value = "WALLET_PAYMENT")
+	private Boolean walletPayment;
+	
+	@Field(value = "NET_BANKING")
+	private Boolean netBanking;
 	
 	@Field(value = "COMMENT")
 	private String comment;
