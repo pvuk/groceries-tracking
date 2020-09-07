@@ -416,7 +416,11 @@ Drop a collection or view from the database. The method also removes any indexes
 ##### or
 ##### Removes all documents from a collection.
 ````
->db.getCollectionNames().forEach(function(e){print(db[e].remove())});
+>db.getCollectionNames().forEach(
+	function(collection_name){
+		print('CollectionName: '+ collection_name +', '+ db[collection_name].remove({})
+	)
+});
 ````
 ##### Removes document from a collection Using ID.
 ````
