@@ -62,7 +62,7 @@ Start a standalone mongod instance without access control.
 =========================================================================================================
 ### Enable MongoDB's free cloud-based monitoring service
 =========================================================================================================
-which will then receive and display metrics about your deployment (disk utilization, CPU, operation statistics, etc.).
+Which will then receive and display metrics about your deployment (disk utilization, CPU, operation statistics, etc.).
 
 ##### 1.4.1 To enable free monitoring, run the following command: 
 ```
