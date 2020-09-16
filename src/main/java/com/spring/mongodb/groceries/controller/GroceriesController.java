@@ -3,11 +3,17 @@
  */
 package com.spring.mongodb.groceries.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.mongodb.groceries.collection.GroceriesTracking;
+import com.spring.mongodb.groceries.service.GroceriesTrackingService;
 
 /**
  * @author P.V. UdayKiran
@@ -16,6 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = {"", "/tracking/custom"})
 public class GroceriesController {
+	
+	private GroceriesTrackingService groceriesTrackingService;
 	
 	/**
 	 * default method without URL. </br>
@@ -61,5 +69,17 @@ public class GroceriesController {
 	public String welcome(@RequestParam(defaultValue = "", value = "name", required = false) String name,
 			@PathVariable(name = "nameof", required = false) String nameof) {
 		return String.format("%s %s %s", "Welcome to Groceries Project !!. ", name, nameof != null ? nameof : "");
+	}
+	
+	/**
+	 * 
+	 * @param groceriesTracking
+	 * @return statusMessage
+	 * @author P.V. UdayKiran
+	 * @since created on Wed 16-Sep-2020 21:51
+	 */
+	@PutMapping(value = "/saveGroceries", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String saveGroceries(@RequestBody GroceriesTracking groceriesTracking) {
+		return groceriesTrackingService.saveGroceries(groceriesTracking);
 	}
 }

@@ -37,6 +37,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class GroceriesTracking {
 	
 	@Id
+	@Field(value = "_id")
 	private String groceriesTrackingId;
 	
 	@Field(value = "PURCHASED_ON")
