@@ -1,5 +1,5 @@
-ionicfreamework Installation steps
-#Install the Ionic CLI
+# Ionic Framework Installation Steps
+# Install the Ionic CLI
 Before proceeding, make sure your computer has Node.js(https://nodejs.org/en/) installed. See these instructions(https://ionicframework.com/docs/installation/environment) to set up an environment for Ionic.
 1. Download latest version of node.js from https://nodejs.org/en/download/current/
 
